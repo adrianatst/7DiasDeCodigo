@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=S, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const frutas = [];
+const laticinios = [];
+const congelados = [];
+const bebidas = [];
+const outros = [];
+
+
+alert('bem vindo a sua lista de compras!');
+
+let adicionar = prompt('Deseja adicionar algun item ? sim - não ');
+
+while(adicionar == 'sim'){    
+    let produto = prompt('qual produto deseja adicionar?');
+    alert('qual o tipo desse produto ?');
+    let tipo = prompt('1 - Frutas.\n2 - Laticinios.\n3 - Congelados.\n4 - Bebidas\n5 - Outros.');
+    if(tipo == 1){
+        frutas.push(produto);
+        adicionar = prompt('Deseja adicionar mais algun item ? sim - não ');
+    }else if(tipo == 2){
+        laticinios.push(produto);
+        adicionar = prompt('Deseja adicionar mais algun item ? sim - não ');
+    }else if(tipo == 3){
+        congelados.push(produto);
+        adicionar = prompt('Deseja adicionar mais algun item ? sim - não ');
+    }else if(tipo == 4){
+        bebidas.push(produto);
+        adicionar = prompt('Deseja adicionar mais algun item ? sim - não ');
+    }else{
+        outros.push(produto);
+        adicionar = prompt('Deseja adicionar mais algun item ? sim - não ');
+    }
+}
+if(adicionar == 'nao'){
+    alert(`sua lista de compras:\nFrutas: ${frutas}\nLaticinios: ${laticinios}\nCongelados: ${congelados}\nBebidas: ${bebidas}\nOutros: ${outros}`);   
+}
+    </script>
+  
+</body>
+</html>
